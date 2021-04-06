@@ -1,0 +1,46 @@
+<div class="navbar-brand">
+    <a class="navbar-item" href="https://chrisjohannesson.com" target="_blank">
+        <img src="/images/chrisjohannesson.png" width="169" height="32">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNav">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+</div>
+<!--
+    Navigation is performed by calling a JavaScript that calls a php script on the server side sending it 
+    the code for the desired page or rather the html that is going to be loaded into the viewing 
+    area of the browser. Here the function is called getPage(pageCode) and is defined in main.js
+-->
+<div id="mainNav" class="navbar-menu">
+    <div class="navbar-start text_color">
+        <a class="navbar-item" href="javascript: getPage('Home')">
+            Home
+        </a>
+        <a class="navbar-item" href="javascript: getPage('About')">
+            About
+        </a>
+        <a class="navbar-item" href="javascript: getPage('Projects')">
+            Projects
+        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link" href="javascript: getPage('Demo Pages')">
+                <!-- this href should be deleted for production unless we write a page for it. -->
+                Demo Pages
+            </a>
+            <div class="navbar-dropdown">
+                <a class="navbar-item" href="javascript: loadIframes('wae')">
+                    Weather &amp; Exchange
+                </a>
+                <!--<a class="navbar-item" href="javascript: loadIframes('receipt')">
+                    Simple receipt
+                </a>-->
+            </div>
+        </div>
+        <a class="navbar-item" href="javascript: getPage('contact')">
+            Contact
+        </a>
+    </div>
+</div>
